@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Escena Animada — PACTO DE SANGRE</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700;900&family=Inter:wght@300;400;600;800&family=Cinzel+Decorative:wght@700;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="stylesheet" href="escena.css" />
+</head>
+<body class="escena-body">
+
+  <a href="index.html" class="back-mini">◄ Inicio</a>
+
+  <!-- CINE -->
+  <div class="cinema" id="cinema">
+    <!-- Efectos de partículas (lluvia, fuego, brasas) -->
+    <canvas id="fx"></canvas>
+
+    <!-- ESCENARIO -->
+    <div class="stage" id="stage">
+      <!-- Fondos -->
+      <div class="sky"></div>
+      <div class="skyline"></div>
+      <div class="tower-interior"></div>
+
+      <!-- Sello de invocación -->
+      <div class="seal" id="seal">
+        <div class="seal-ring r1"></div>
+        <div class="seal-ring r2"></div>
+        <div class="seal-ring r3"></div>
+        <div class="seal-glyph"></div>
+        <div class="seal-fire"></div>
+      </div>
+
+      <!-- VAEL'ZAR (demonio) -->
+      <div class="char-demon" id="demon">
+        <svg viewBox="0 0 300 340" xmlns="http://www.w3.org/2000/svg">
+          <!-- Cuerpo -->
+          <path class="d-body" d="M150 340 C60 340 70 200 90 150 C60 120 55 70 80 40 C95 80 120 95 120 95 C110 60 120 25 150 10 C180 25 190 60 180 95 C180 95 205 80 220 40 C245 70 240 120 210 150 C230 200 240 340 150 340 Z"/>
+          <!-- Cuernos -->
+          <path class="d-horn" d="M118 60 C90 30 70 -5 55 -30 C95 0 120 25 128 55 Z"/>
+          <path class="d-horn" d="M182 60 C210 30 230 -5 245 -30 C205 0 180 25 172 55 Z"/>
+          <!-- Ojos -->
+          <ellipse class="d-eye" cx="128" cy="80" rx="11" ry="7"/>
+          <ellipse class="d-eye" cx="172" cy="80" rx="11" ry="7"/>
+        </svg>
+      </div>
+
+      <!-- MAX (humano) -->
+      <div class="char-max" id="max">
+        <svg viewBox="0 0 120 260" xmlns="http://www.w3.org/2000/svg">
+          <!-- Capa -->
+          <path class="m-cloak" d="M60 70 C90 75 100 120 96 260 L24 260 C20 120 30 75 60 70 Z"/>
+          <!-- Cabeza -->
+          <circle class="m-head" cx="60" cy="46" r="26"/>
+          <!-- Bufanda roja -->
+          <path class="m-scarf" d="M40 66 C50 78 70 78 80 66 L86 84 C70 96 50 96 34 84 Z"/>
+          <!-- Mechón -->
+          <path class="m-hair" d="M36 40 C40 18 80 18 84 40 C74 30 46 30 36 40 Z"/>
+        </svg>
+      </div>
+
+      <!-- LIRA (silueta al fondo) -->
+      <div class="char-lira" id="lira">
+        <svg viewBox="0 0 90 230" xmlns="http://www.w3.org/2000/svg">
+          <path class="l-body" d="M45 60 C68 64 74 110 70 230 L20 230 C16 110 22 64 45 60 Z"/>
+          <circle class="l-head" cx="45" cy="40" r="20"/>
+          <rect class="l-blade" x="76" y="70" width="5" height="150" rx="2"/>
+        </svg>
+      </div>
+
+      <!-- Destello del pacto -->
+      <div class="flash" id="flash"></div>
+    </div>
+
+    <!-- Barras cinematográficas -->
+    <div class="letterbox top"></div>
+    <div class="letterbox bottom"></div>
+
+    <!-- Subtítulo estilo anime -->
+    <div class="subtitle" id="subtitle">
+      <span class="speaker" id="speaker"></span>
+      <p class="line" id="line"></p>
+    </div>
+
+    <!-- Cartel de título final -->
+    <div class="title-card" id="titleCard">
+      <p class="tc-kicker">CAPÍTULO 1</p>
+      <h1 class="tc-title">PACTO<br><span>DE SANGRE</span></h1>
+      <p class="tc-sub">El Pacto del Huérfano</p>
+    </div>
+
+    <!-- Overlay de inicio -->
+    <div class="start-overlay" id="startOverlay">
+      <div class="start-inner">
+        <p class="start-kicker">ESCENA ANIMADA</p>
+        <h2>El Pacto</h2>
+        <p class="start-desc">Una escena cinematográfica del Capítulo 1. Sube el volumen de tu imaginación.</p>
+        <button class="btn btn-primary btn-lg" id="playBtn">▶ Reproducir escena</button>
+      </div>
+    </div>
+
+    <!-- Controles -->
+    <div class="controls" id="controls">
+      <button id="replayBtn" title="Repetir">↺ Repetir</button>
+      <button id="skipBtn" title="Saltar">Saltar ▸</button>
+    </div>
+  </div>
+
+  <div class="escena-foot">
+    <a href="capitulo-1.html" class="btn btn-ghost">📖 Leer el Capítulo 1 completo</a>
+    <a href="index.html" class="btn btn-ghost">◄ Volver al inicio</a>
+  </div>
+
+  <script src="escena.js"></script>
+</body>
+</html>
