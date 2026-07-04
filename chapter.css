@@ -1,0 +1,90 @@
+/* ===== READER (Capítulo) ===== */
+.reader {
+  position: relative;
+  z-index: 2;
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 140px 6vw 80px;
+}
+.reader-head { text-align: center; margin-bottom: 60px; }
+.reader-head h1 {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: clamp(2rem, 6vw, 3.4rem);
+  margin: 14px 0 18px;
+  text-shadow: 0 0 30px rgba(179,15,22,0.4);
+}
+.reader-sub { color: var(--text-dim); font-style: italic; font-size: 1.05rem; }
+.reader-head::after {
+  content: ''; display: block; width: 80px; height: 3px;
+  background: linear-gradient(90deg, transparent, var(--blood-bright), transparent);
+  margin: 30px auto 0;
+}
+
+.reader-body { font-size: 1.12rem; line-height: 1.9; color: var(--text); }
+.reader-body p { margin-bottom: 24px; }
+.reader-body em { color: var(--ember); font-style: italic; }
+.reader-body strong { color: var(--blood-bright); font-weight: 700; }
+
+.dropcap::first-letter {
+  font-family: 'Cinzel Decorative', serif;
+  font-size: 4.2rem;
+  float: left;
+  line-height: 0.8;
+  padding: 6px 14px 0 0;
+  color: var(--blood-bright);
+  text-shadow: 0 0 20px rgba(255,46,58,0.5);
+}
+
+.scene-break {
+  text-align: center;
+  color: var(--blood);
+  font-size: 1.4rem;
+  margin: 40px 0;
+  letter-spacing: 0.5em;
+}
+
+.demon-speak {
+  font-family: 'Cinzel', serif;
+  color: #c77adb !important;
+  padding-left: 22px;
+  border-left: 3px solid #7a1a7a;
+  font-size: 1.05rem;
+  text-shadow: 0 0 16px rgba(199,122,219,0.3);
+}
+.demon-speak.big {
+  font-size: 1.5rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  border-left-color: var(--blood-bright);
+  color: #ff5ce0 !important;
+}
+
+.chapter-end {
+  text-align: center;
+  font-family: 'Cinzel', serif;
+  letter-spacing: 0.2em;
+  color: var(--gold);
+  margin: 60px 0 20px;
+  font-size: 1rem;
+}
+
+.reader-foot {
+  max-width: 760px;
+  margin: 40px auto 0;
+  padding: 40px 6vw 0;
+  border-top: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 20px;
+  position: relative;
+  z-index: 2;
+}
+.reader-next { color: var(--text-dim); font-size: 0.9rem; }
+.reader-next em { color: var(--ember); }
+
+@media (max-width: 600px) {
+  .reader { padding-top: 110px; }
+  .reader-body { font-size: 1.05rem; }
+}
